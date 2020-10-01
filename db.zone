@@ -1,0 +1,5 @@
+zone.		3600 IN SOA	localhost. . 1 3600 3600 604800 3600
+zone.		3600 IN NS	localhost.
+one.zone.	3600 IN TXT	""
+two.zone.	3600 IN TXT	""
+three.zone.	3600 IN TXT	""

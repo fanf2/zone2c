@@ -4,7 +4,7 @@
 use warnings;
 use strict;
 
-use Getopt::Std;
+use File::Slurp;
 use Net::DNS;
 use Net::DNS::ZoneFile;
 
@@ -187,4 +187,8 @@ for my $label (labels $zonename) {
 	$tail = wire $label, $tail;
 }
 
+print read_file "zone2c.re";
+
 zone2re $tree, $tail;
+
+print "\n%}\n}\n";
