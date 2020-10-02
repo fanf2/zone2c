@@ -126,7 +126,7 @@ sub zone2re;
 sub zone2re {
 	my ($t,$tail) = @_;
 	print <<RE2C;
-'$tail' { return "Y $tail" }
+'$tail' { return "Y $tail"; }
 RE2C
 	my $NX = "N $tail";
 	my @label = sort keys %$t;
@@ -171,7 +171,7 @@ RE2C
 			push @nx, extensions $prefix, $range, $tail;
 		}
 		print join " |\n", @nx;
-		print "\t{ return \"$NX\" }\n";
+		print "\t{ return \"$NX\"; }\n";
 		return $NX if $next eq '';
 		$NX = zone2re $t->{$next}, wire $next, $tail;
 		$prev = $next;

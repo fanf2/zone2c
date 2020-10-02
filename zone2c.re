@@ -7,7 +7,7 @@ scan_qname(void *qname) {
 	typedef unsigned char YYCTYPE;
 	YYCTYPE *YYCURSOR = qname;
 	YYCTYPE *YYLIMIT = YYCURSOR + 255;
-	YYCTYPE *YYMARKER = NULL;
+	YYCTYPE *YYMARKER = 0;
 /*
 
 (progn
